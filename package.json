@@ -1,0 +1,14 @@
+{
+  "name": "henrik3_dev",
+  "version": "1.0.0",
+  "description": "Henrik3 website",
+  "main": "js/script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.sass css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
