@@ -1,0 +1,24 @@
+.btn
+
+  &:link,
+  &:visited
+    text-transform: uppercase
+    margin-left: 1.2em
+    padding: 6px 12px
+    border-radius: 2px
+    border: 2px solid transparent
+
+
+  &-darken
+    &:link,
+    &:visited
+      background-color: $header_button
+      border-radius: 2px
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+
+    &:hover
+      background-color: darken($header_button, 7%)
+    &:active
+      background-color: lighten($header_button, 7%)
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)

@@ -1,29 +1,31 @@
-*
+body
   font-family: $roboto
-
-.menu_list a
-  font-weight: 700
-  font-size: 1.1em
-  text-decoration: none
-
-.title
+  line-height: 1.7
   color: $text_color
-  text-align: center
-  font-weight: 400
-  font-size: 5em
-  margin-bottom: 0.5em
-
-  &.sub
-    font-weight: 200
 
 .btn
-  color: $nav_font_color
+  &:link,
+  &:visited
+    font-weight: 700
+    font-size: 16px
+    text-decoration: none
+    color: $nav_font_color
 
   &:hover
     color: lighten($nav_font_color, 20%)
 
-.btn-darken
-  color: lighten($nav_font_color, 80%)
+  &-darken
+    &:link,
+    &:visited
+      color: $white
 
-  &:hover
-    color: lighten($nav_font_color, 100%)
+
+.heading-primary
+
+  &-main
+    display: block
+    font-size: 2em
+    font-weight: 700
+
+  &-sub
+    font-weight: 400
