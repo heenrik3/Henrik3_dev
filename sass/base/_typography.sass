@@ -7,14 +7,14 @@ body
   &:link,
   &:visited
     font-weight: 700
-    font-size: 16px
+    font-size: 1.4em
     text-decoration: none
     color: $nav_font_color
 
-  &:hover
-    color: lighten($nav_font_color, 20%)
+  &:active
+    color: $white
 
-  &-darken
+  &--darken
     &:link,
     &:visited
       color: $white
@@ -22,10 +22,10 @@ body
 
 .heading-primary
 
-  &-main
-    display: block
+  &--main
+    display: flex
     font-size: 2em
     font-weight: 700
 
-  &-sub
+  &--sub
     font-weight: 400

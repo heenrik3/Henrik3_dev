@@ -3,12 +3,17 @@ body
 
 .main-container
   width: 70%
-  margin-top: 3.5em
-  margin-left: auto
-  margin-right: auto
-  padding: 3em 5em 4em
+  margin: 0 auto
+  margin-top: 5em
+  padding: 5em
   border-radius: 40px
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+  box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
   background-color: $main_container_color
-  animation-name: moveInTop
-  animation-duration: 1.5s
+  animation: moveInTop $moveInTopTime
+
+.section-intro
+  @include clearfix
+
+  & .profile-picture
+    
+    width: 4em
