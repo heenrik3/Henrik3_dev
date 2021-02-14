@@ -1,26 +1,28 @@
 .btn
   &:link,
   &:visited
-    margin-left: 0.6em
+    &:not(:first-child)
+      margin-left: 0.6em
+
     padding: 8px 16px
     border-radius: 2px
     text-transform: uppercase
-    border: 2px solid transparent
     transition: all 0.3s cubic-bezier(.25,.8,.25,1)
 
-  &:hover
-    background-color: lighten($notsoblack, 70%)
-  &:active
-    background-color: lighten($notsoblack, 60%)
-
-  &--darken
+  &--outlined
     &:link,
     &:visited
-      border: 0
-      border-radius: 3px
-      box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
-      transition: all 0.3s cubic-bezier(.25,.8,.25,1)
-      background-color: $header_button
+      border: 1px solid $lightgray
+
+    &:hover
+      background-color: lighten($header_button, 53%)
+    &:active
+      background-color: lighten($header_button, 40%)
+
+  &--contained
+    border: 1px solid transparent
+    background-color: $header_button
+    box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
 
     &:hover
       background-color: darken($header_button, 7%)

@@ -6,26 +6,30 @@ body
 .btn
   &:link,
   &:visited
+    text-align: center
     font-weight: 700
     font-size: 1.4em
     text-decoration: none
-    color: $nav_font_color
 
-  &:active
-    color: $white
+  &--outlined
+    &:link,
+    &:visited
+      color: $header_button
 
-  &--darken
+  &--contained
     &:link,
     &:visited
       color: $white
 
 
 .heading-primary
+  line-height: 1
 
   &--main
-    display: flex
-    font-size: 2em
+    display: block
+    font-size: 6em
     font-weight: 700
 
   &--sub
+    font-size: 3em
     font-weight: 400
