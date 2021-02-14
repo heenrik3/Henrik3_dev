@@ -1,20 +1,20 @@
 body
+  color: $body-text-color
   font-family: $roboto
-  line-height: 1.7
-  color: $text_color
+  line-height: 1
 
 .btn
   &:link,
   &:visited
-    text-align: center
     font-weight: 700
     font-size: 1.4em
+    text-align: center
     text-decoration: none
 
   &--outlined
     &:link,
     &:visited
-      color: $header_button
+      color: $material-btn-primary-color
 
   &--contained
     &:link,
@@ -23,7 +23,6 @@ body
 
 
 .heading-primary
-  line-height: 1
 
   &--main
     display: block
@@ -33,3 +32,19 @@ body
   &--sub
     font-size: 3em
     font-weight: 400
+
+.paragraph
+  font-weight: 300
+  font-size: 1.4em
+  line-height: 1.5
+  text-align: justify
+  &:not(:last-child)
+
+    margin-bottom: 1vh
+
+.heading-secondary
+
+  &--main
+    display: block
+    font-size: 1.7em
+    font-weight: 700

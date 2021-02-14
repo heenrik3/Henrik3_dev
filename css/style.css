@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-/*  FONT-FAMILY*/
 /* COLORS      */
+/*   outline button colors  */
+/*  FONT-FAMILY*/
 /* END COLORS   */
 /* MAIN VARIABLES */
 /*  END MAIN VARIABLES */
@@ -24,34 +25,46 @@ html {
 
 body {
   box-sizing: border-box;
-  animation: moveInTop 4.5s; }
+  animation: moveInTop 1.5s; }
 
 body {
+  color: #333333;
   font-family: "Roboto", sans-serif;
-  line-height: 1.7;
-  color: #333333; }
+  line-height: 1; }
 
 .btn:link, .btn:visited {
-  text-align: center;
   font-weight: 700;
   font-size: 1.4em;
+  text-align: center;
   text-decoration: none; }
 
 .btn--outlined:link, .btn--outlined:visited {
-  color: #1565C0; }
+  color: #F2165C; }
 
 .btn--contained:link, .btn--contained:visited {
   color: #FFF; }
 
-.heading-primary {
-  line-height: 1; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6em;
-    font-weight: 700; }
-  .heading-primary--sub {
-    font-size: 3em;
-    font-weight: 400; }
+.heading-primary--main {
+  display: block;
+  font-size: 6em;
+  font-weight: 700; }
+
+.heading-primary--sub {
+  font-size: 3em;
+  font-weight: 400; }
+
+.paragraph {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.5;
+  text-align: justify; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1vh; }
+
+.heading-secondary--main {
+  display: block;
+  font-size: 1.7em;
+  font-weight: 700; }
 
 .u-center-text {
   text-align: center; }
@@ -62,32 +75,51 @@ body {
 .u-margin-top {
   margin-top: 5em; }
 
+.u-margin-bottom {
+  margin-bottom: 2em; }
+
+.u-float-left {
+  float: left; }
+
+.u-float-right {
+  float: right; }
+
+.u-padding-right {
+  padding-right: 5em; }
+
 .btn:link, .btn:visited {
   padding: 8px 16px;
   border-radius: 2px;
   text-transform: uppercase;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  background-position: center;
+  border: 1.5px solid transparent;
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .btn:link:not(:first-child), .btn:visited:not(:first-child) {
     margin-left: 0.6em; }
 
 .btn--outlined:link, .btn--outlined:visited {
-  border: 1px solid #d5d5d5; }
+  border: 1.5px solid #cfcfcf;
+  background: transparent radial-gradient(circle, transparent 1%, white 1%) center/15000%; }
 
 .btn--outlined:hover {
-  background-color: #e7f1fc; }
+  background-color: white; }
 
 .btn--outlined:active {
-  background-color: #abcef6; }
+  background-color: #fdd7e3;
+  background-size: 100%;
+  transition: background 0s; }
 
-.btn--contained {
-  border: 1px solid transparent;
-  background-color: #1565C0;
+.btn--contained:link, .btn--contained:visited {
+  background: #F2165C radial-gradient(circle, transparent 1%, #F2165C 1%) center/15000%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .btn--contained:hover {
-    background-color: #1154a0; }
-  .btn--contained:active {
-    background-color: #1976e0;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.btn--contained:hover {
+  background-color: #d80c4d; }
+
+.btn--contained:active {
+  background-size: 100%;
+  background-color: #f777a0;
+  transition: background 0s; }
 
 .row {
   margin: 0 auto;
@@ -116,9 +148,8 @@ body {
 
 .header {
   width: 100%;
-  margin-bottom: 12em;
-  position: relative;
-  background-color: transparent; }
+  height: 6vh;
+  margin-bottom: 12em; }
   .header::after {
     content: "";
     display: table;
@@ -126,13 +157,14 @@ body {
   .header__logo-box {
     position: absolute; }
   .header__logo {
-    width: 10em; }
-  .header__right_area {
+    width: 14em; }
+  .header__menu-area {
+    height: 4em;
     float: right; }
 
 .footer {
   width: 100%;
-  height: 80vh;
+  height: 40vh;
   background-color: #1d3557;
   display: block; }
 
@@ -142,7 +174,7 @@ body {
 .main-container {
   width: 70%;
   margin: 5em auto;
-  padding: 5em;
+  padding: 8em;
   border-radius: 40px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-color: #FFF; }
@@ -153,6 +185,7 @@ body {
   clear: both; }
 
 .section-intro .profile-picture {
+  width: 30em;
   border-radius: 20em;
   border: 2em solid #d5d5d5;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }

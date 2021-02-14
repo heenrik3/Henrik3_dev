@@ -7,25 +7,41 @@
     padding: 8px 16px
     border-radius: 2px
     text-transform: uppercase
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+    // for ripple effect
+    background-position: center
+
+    border: $material-btn-border-size solid transparent
+    transition: all 1s cubic-bezier(.25,.8,.25,1)
 
   &--outlined
     &:link,
     &:visited
-      border: 1px solid $lightgray
+      border: $material-btn-border-size solid $material-outline-btn-border-color
+      // for ripple effect
+      background: transparent radial-gradient(circle, transparent 1%, $material-outline-btn-hover-bg 1%) center/15000%
 
     &:hover
-      background-color: lighten($header_button, 53%)
+      background-color: $material-outline-btn-hover-bg
     &:active
-      background-color: lighten($header_button, 40%)
+      background-color: $material-outline-btn-active-bg
+      // for ripple effect
+      background-size: 100%
+      transition: background 0s
 
   &--contained
-    border: 1px solid transparent
-    background-color: $header_button
-    box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
+    &:link,
+    &:visited
+      // for ripple effect
+      background: $material-contained-btn-bg radial-gradient(circle, transparent 1%, $material-contained-btn-bg 1%) center/15000%
+      box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
 
     &:hover
-      background-color: darken($header_button, 7%)
+      background-color: $material-contained-btn-hover-bg
     &:active
-      background-color: lighten($header_button, 7%)
-      box-shadow: 0 14px 28px rgba($black, 0.25), 0 10px 10px rgba($black, 0.22)
+      // for ripple effect
+      background-size: 100%
+      background-color: $material-contained-btn-active-bg
+
+      //box-shadow: 0 14px 28px rgba($black, 0.25), 0 10px 10px rgba($black, 0.22)
+      transition: background 0s
+      // transition: box-shadow 1s cubic-bezier(.25,.8,.25,1)
