@@ -9,6 +9,17 @@ body
   box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
   background-color: $main_container_color
 
+
+  @include respond(tab-port)
+    margin: 5em auto
+    width: 90%
+
+  @include respond(phone)
+    margin: 0
+    width: 100%
+    padding: 5em
+    border-radius: 0
+
 .section
   @include clearfix
 
@@ -22,6 +33,13 @@ body
       border: 2em solid $lightgray
       box-shadow: 0 3px 6px rgba($black,0.16), 0 3px 6px rgba($black,0.23)
 
+      @include respond(tab-port)
+        border-radius: 15em
+
+    & .heading-primary
+      @include respond(phone)
+        margin-top: 30em
+
   &__skills
 
   & .heading-secondary
@@ -31,7 +49,7 @@ body
       border-bottom: 1px solid $lightgray
 
   & .info-list
-    
+
       //margin-left: 1rem
       //outline: 0.2rem solid $lightgray
       //outline-offset: 1rem

@@ -4,7 +4,7 @@
   "description": "Henrik3 website",
   "main": "js/script.js",
   "scripts": {
-    "compile:sass": "sass sass/main.sass css/style.css --watch"
+    "compile:sass": "node-sass sass/main.sass css/style.css --watch"
   },
   "author": "",
   "license": "ISC",
